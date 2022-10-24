@@ -60,7 +60,7 @@ class Dialogue extends PositionComponent with HasGameRef<GalatrixGame> {
         break;
       case 14:
         characterSpriteComponent.sprite = nakoaSprite;
-        gameRef.background.sprite = gameRef.backgrounds[4];
+        gameRef.background.sprite = gameRef.backgrounds[5];
         break;
     }
   }
