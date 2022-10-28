@@ -18,3 +18,12 @@
 ### Backgrounds
 
 * [Kronbits Background](https://kronbits.itch.io/backgrounds)
+
+![backgrounds](docs/backgrounds.png)
+
+| background | name | description |
+| --------  | --------- | ------ |
+| 1 backgrounds[0] | Isle of Dark Souls | Place where Galatrix was abandoned |
+| 7 [6] | Valley of Fortune | Home of Nakoa |
+| 8 [7] | Frozen Mountain | Where Orenda is Hiding |
+

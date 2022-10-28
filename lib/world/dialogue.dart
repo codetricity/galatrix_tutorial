@@ -15,6 +15,7 @@ class Dialogue extends PositionComponent with HasGameRef<GalatrixGame> {
   @override
   Future<void> onLoad() async {
     await super.onLoad();
+
     size = gameRef.size;
     galatrixSprite = await gameRef.loadSprite('characters/galatrix.jpg');
     characterSpriteComponent
@@ -40,19 +41,37 @@ class Dialogue extends PositionComponent with HasGameRef<GalatrixGame> {
     super.update(dt);
     switch (gameRef.level) {
       case 1:
+        // [0] Isle of Dark Souls
+        gameRef.background.sprite = gameRef.backgrounds[0];
+        break;
+      case 3:
+        characterSpriteComponent.sprite = nakoaSprite;
+        // [6] Valley of Fortune - Nakoa's home
+        gameRef.background.sprite = gameRef.backgrounds[6];
+        break;
+      case 4:
+        characterSpriteComponent.sprite = galatrixSprite;
+        // [0] Isle of Dark Souls
         gameRef.background.sprite = gameRef.backgrounds[0];
         break;
       case 5:
         characterSpriteComponent.sprite = orendaSprite;
-        gameRef.background.sprite = gameRef.backgrounds[1];
+        // [7] Frozen Mountain
+        gameRef.background.sprite = gameRef.backgrounds[7];
         break;
       case 7:
+        characterSpriteComponent.sprite = galatrixSprite;
+        gameRef.background.sprite = gameRef.backgrounds[0];
+        break;
+      case 8:
         characterSpriteComponent.sprite = nakoaSprite;
-        gameRef.background.sprite = gameRef.backgrounds[2];
         break;
       case 9:
         characterSpriteComponent.sprite = galatrixSprite;
         gameRef.background.sprite = gameRef.backgrounds[3];
+        break;
+      case 10:
+        characterSpriteComponent.sprite = nakoaSprite;
         break;
       case 11:
         characterSpriteComponent.sprite = orendaSprite;
