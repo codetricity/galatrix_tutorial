@@ -36,7 +36,7 @@ class GalatrixGame extends FlameGame with TapDetector {
 
   Future<void> loadBackgrounds() async {
     for (int i = 1; i < 10; i++) {
-      backgrounds.add(await loadSprite('backgrounds/background_$i.png'));
+      backgrounds.add(await loadSprite('backgrounds/background_$i.webp'));
     }
   }
 }
