@@ -1,4 +1,5 @@
 import 'package:galatrix/world/dialogue.dart';
+import 'package:galatrix/world/sfx/explosion.dart';
 
 enum Location {
   isleOfDarkSouls,
@@ -7,7 +8,7 @@ enum Location {
   steppesOfSuffering
 }
 
-enum Character { galatrix, orenda, nakoa }
+enum Character { galatrix, galatrix2, orenda, nakoa }
 
 List<Dialogue> dialogues = [
   Dialogue(
@@ -24,7 +25,8 @@ List<Dialogue> dialogues = [
       'There is a montrous power inside me. It is wild and difficult to control. '
       'I destroyed several rooms in the palace and am now imprisoned in a castle '
       'on the Isle of Dark Souls. '
-      'In my loneliness, I meditated and learned to calm the demons inside my mind.'),
+      'In my loneliness, I meditated and learned to calm the demons inside my mind.')
+    ..specialEffect = Explosion(),
 
   Dialogue(
       Location.valleyOfFortune,
@@ -74,7 +76,14 @@ List<Dialogue> dialogues = [
       'She can live in the mountains in peace.  You and I can go to the Valley of Fortune. '
       'Marry me and let\'s search for peace.  I\'ve loved you since when I first met you '
       'as a child.'),
-  // 'L1S11',
+  Dialogue(
+    Location.steppesOfSuffering,
+    Character.galatrix2,
+    '11G Nakoa, I cannot abandon Orenda.  I am all she has.  I will find her and we '
+    'will meet you in the Valley of Fortune.  Wait for me there.  We can marry soon '
+    'after Orenda and I return.',
+  ),
+
   // 'L1S12',
   // 'L1S13',
   // 'L1S14',
