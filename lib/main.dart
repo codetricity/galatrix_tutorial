@@ -22,12 +22,29 @@ class GalatrixGame extends FlameGame with TapDetector {
     background = SpriteComponent(sprite: backgrounds[0], size: size);
     add(background);
 
-    add(Dialogue());
+    add(dialogues[0]);
   }
 
   @override
   void onTapDown(TapDownInfo info) {
-    if (level < dialogs.length) {
+    if (level < dialogues.length) {
+      remove(dialogues[level - 1]);
+      add(dialogues[level]);
+
+      switch (dialogues[level].location) {
+        case Location.frozenMountain:
+          background.sprite = backgrounds[7];
+          break;
+        case Location.isleOfDarkSouls:
+          background.sprite = backgrounds[0];
+          break;
+        case Location.valleyOfFortune:
+          background.sprite = backgrounds[6];
+          break;
+        case Location.steppesOfSuffering:
+          background.sprite = backgrounds[8];
+          break;
+      }
       level++;
       print('level: $level');
     }
