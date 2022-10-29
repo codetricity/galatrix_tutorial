@@ -28,3 +28,6 @@
 | 8 [7] | Frozen Mountain | Where Orenda is Hiding |
 | 9 [8] | Steppes of Suffering | foothils of the Frozen Mountain |
 
+### Special Effects
+
+* [explosion](https://free-game-assets.itch.io/11-free-pixel-art-explosion-sprites)
