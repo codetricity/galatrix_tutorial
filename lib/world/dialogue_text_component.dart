@@ -12,13 +12,13 @@ class DialogueTextComponent extends TextBoxComponent
   @override
   void render(Canvas c) {
     final rect = Rect.fromLTWH(0, 0, width, height);
-    c.drawRect(rect, Paint()..color = Color.fromARGB(120, 63, 63, 63));
+    c.drawRect(rect, Paint()..color = const Color.fromARGB(180, 63, 63, 63));
     super.render(c);
   }
 
   @override
   void update(double dt) {
-    text = dialogs[gameRef.level - 1];
+    text = dialogs[gameRef.level - 1].text;
     super.update(dt);
   }
 }
