@@ -7,7 +7,9 @@ import '../data/dialog_data.dart';
 class DialogueTextComponent extends TextBoxComponent
     with HasGameRef<GalatrixGame> {
   DialogueTextComponent()
-      : super(size: Vector2(800, 160), boxConfig: TextBoxConfig(maxWidth: 800));
+      : super(
+            size: Vector2(800, 160),
+            boxConfig: TextBoxConfig(maxWidth: 800, timePerChar: 0.05));
 
   @override
   void render(Canvas c) {

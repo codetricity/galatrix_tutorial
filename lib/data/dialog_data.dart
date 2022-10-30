@@ -1,5 +1,6 @@
 import 'package:galatrix/world/dialogue.dart';
 import 'package:galatrix/world/sfx/explosion.dart';
+import 'package:galatrix/world/sfx/galatrix_young.dart';
 
 enum Location {
   isleOfDarkSouls,
@@ -33,7 +34,8 @@ List<Dialogue> dialogues = [
       Character.nakoa,
       'L3N Galatrix, I remember you. I remember a connection. I still feel it. '
       'When you disappeared, I felt lost, like a part of my destiny '
-      'was broken. I have a ship.  How can I find you?'),
+      'was broken. I have a ship.  How can I find you?')
+    ..specialEffect = GalatrixYoung(),
   Dialogue(
       Location.isleOfDarkSouls,
       Character.galatrix,

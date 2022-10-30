@@ -67,6 +67,7 @@ flutter:
     - assets/images/characters/
     - assets/images/sfx/
     - assets/images/sfx/explosion/
+    - assets/images/sfx/actors/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
