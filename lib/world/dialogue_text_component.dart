@@ -1,8 +1,7 @@
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
-import 'package:galatrix/main.dart';
-
 import '../data/dialog_data.dart';
+import '../galatrix_game.dart';
 
 class DialogueTextComponent extends TextBoxComponent
     with HasGameRef<GalatrixGame> {

@@ -1,6 +1,6 @@
 import 'package:flame/components.dart';
-import 'package:galatrix/main.dart';
 import '../data/dialog_data.dart';
+import '../galatrix_game.dart';
 import 'dialogue_text_component.dart';
 
 class Dialogue extends PositionComponent with HasGameRef<GalatrixGame> {

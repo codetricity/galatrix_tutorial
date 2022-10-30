@@ -1,5 +1,5 @@
 import 'package:flame/components.dart';
-import 'package:galatrix/main.dart';
+import '../../galatrix_game.dart';
 
 class GalatrixYoung extends PositionComponent with HasGameRef<GalatrixGame> {
   GalatrixYoung() : super(anchor: Anchor.bottomRight);
