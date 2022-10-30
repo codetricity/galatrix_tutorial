@@ -15,7 +15,7 @@ void main() {
 
   runApp(
     MaterialApp(
-      home: BlocProvider(
+      home: BlocProvider<StorylineCubit>(
         create: (context) => StorylineCubit(),
         child: Scaffold(
           body: Stack(
