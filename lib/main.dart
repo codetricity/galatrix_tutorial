@@ -1,11 +1,15 @@
 import 'package:flame/components.dart';
 import 'package:flame/events.dart';
+import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
 import 'package:galatrix/data/dialog_data.dart';
 import 'package:galatrix/world/dialogue.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Flame.device.fullScreen();
+  Flame.device.setLandscape();
   var game = GalatrixGame();
   runApp(GameWidget(game: game));
 }
