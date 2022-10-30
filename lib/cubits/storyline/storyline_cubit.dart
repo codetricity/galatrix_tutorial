@@ -7,6 +7,10 @@ class StorylineCubit extends Cubit<StorylineState> {
   StorylineCubit() : super(StorylineInitial());
 
   void showMarriageDecisionBox() async {
-    emit(StorylineMarriageDecision());
+    emit(const StorylineMarriageDecision(false));
+  }
+
+  void agreeToMarriage() async {
+    emit(const StorylineMarriageDecision(true));
   }
 }
