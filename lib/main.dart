@@ -14,10 +14,10 @@ void main() {
   Flame.device.setLandscape();
 
   runApp(
-    MaterialApp(
-      home: BlocProvider<StorylineCubit>(
-        create: (context) => StorylineCubit(),
-        child: Scaffold(
+    BlocProvider<StorylineCubit>(
+      create: (context) => StorylineCubit(),
+      child: MaterialApp(
+        home: Scaffold(
           body: Stack(
             children: const [FlameGameWidget(), FlutterLayer()],
           ),

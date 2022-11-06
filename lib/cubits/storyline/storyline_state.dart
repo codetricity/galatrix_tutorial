@@ -1,19 +1,38 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 part of 'storyline_cubit.dart';
 
-abstract class StorylineState extends Equatable {
-  final bool marriagePath;
-  const StorylineState(this.marriagePath);
+class StorylineState extends Equatable {
+  const StorylineState({
+    required this.level,
+    required this.showMarriageDecisionBox,
+    required this.continueStoryline,
+  });
+  final int level;
+  final bool showMarriageDecisionBox;
+  final bool continueStoryline;
 
   @override
-  List<Object> get props => [];
+  List<Object> get props => [level, showMarriageDecisionBox, continueStoryline];
+
+  StorylineState copyWith({
+    int? level,
+    bool? showMarriageDecisionBox,
+    bool? continueStoryline,
+  }) {
+    return StorylineState(
+      level: level ?? this.level,
+      showMarriageDecisionBox:
+          showMarriageDecisionBox ?? this.showMarriageDecisionBox,
+      continueStoryline: continueStoryline ?? this.continueStoryline,
+    );
+  }
+
+  @override
+  bool get stringify => true;
 }
 
 class StorylineInitial extends StorylineState {
-  const StorylineInitial() : super(false);
-}
-
-class StorylineMarriageDecision extends StorylineState {
-  final bool marriageDecision;
-  const StorylineMarriageDecision(this.marriageDecision)
-      : super(marriageDecision);
+  const StorylineInitial()
+      : super(
+            level: 1, showMarriageDecisionBox: false, continueStoryline: true);
 }
